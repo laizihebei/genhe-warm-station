@@ -89,4 +89,3 @@ export function enhance(ctx){
  const api={sync,tick,setExplode,restoreImmediate,compound,get amount(){return current;},get target(){return target;},get event(){return activeEvent;},originals,originalMeshes,roofSnow,environment:env,get particleDensity(){return uniforms.density.value;},get snowfallVisible(){return snowfall.visible;},get visibleIceParts(){return iceParts.filter(p=>p.mesh.visible).length+iceRoute.filter(p=>p.mesh.visible).length;},get visibleRouteSnow(){return routeSnow.filter(p=>p.mesh.visible).length;},get routeSurfaceTriangleCount(){return routeSnow.reduce((n,p)=>n+p.triangles,0);},get coldAirVisible(){return airPath.visible;},get sunMarkerVisible(){return sunMarker.visible;},assertRestored(){return[...originals].every(([o,p])=>o.position.distanceTo(p)<1e-8)}};
  window.__genhe.upgrade=api;sync(state,ctx.evaluate(state));return api;
 }
-

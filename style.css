@@ -4,4 +4,3 @@
 
 /* Keep explanatory text legible in a review setting. */
 .topbar nav button{font-size:12px}.lead{font-size:13px}.research-grid p{font-size:11px}.site-meta small{font-size:10px}.scenario-desc{font-size:12px}.response-card>p{font-size:11px}.metrics small{font-size:9px}.strategy-list small{font-size:11px}.walk-instructions p{font-size:11px}.louver-control p{font-size:10px}.method{font-size:10px}@media(max-width:760px){.topbar nav button{font-size:9px}}
-

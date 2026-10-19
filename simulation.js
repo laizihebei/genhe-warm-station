@@ -7,4 +7,3 @@ export function evaluate(s){const sun=solarPosition(s.hour),delta=18-s.temperatu
  const visuals={coldIntensity:Math.max(0,Math.min(1,-s.temperature/40)),snowDepthMeters:Math.max(0,s.snow/1000),pathSnowDepthMeters:s.cleared?0:Math.max(0,s.snow/1000),iceVisible:Boolean(s.ice),sunAltitudeDegrees:sun.altitude,daylightIntensity:Math.max(0,Math.min(1,Math.sin(Math.max(0,sun.altitude)*RAD)/Math.sin(25*RAD)))};
  return{title,text,chain,warning,metrics,sun,delta,snowLoad,recommendedAngle,visuals};}
 export function attemptRotate(s,angle){if(s.ice)return{ok:false,reason:'积冰尚未清除，请勿转动百叶。'};if(s.locked)return{ok:false,reason:'请先拔出锁销，再转动百叶。'};if(![0,75].includes(angle))return{ok:false,reason:'仅支持 R04 规定的 0° / 75° 两个锁止位置。'};s.angle=angle;return{ok:true};}
-

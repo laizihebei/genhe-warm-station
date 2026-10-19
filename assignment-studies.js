@@ -218,4 +218,3 @@ function renderStudy() {
 }
 
 if (typeof document !== 'undefined') renderStudy();
-
