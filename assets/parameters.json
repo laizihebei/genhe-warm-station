@@ -1,0 +1,488 @@
+{
+  "project": "冷极暖站 / GENHE WARM STATION",
+  "revision": "W02-R04-Reviewed",
+  "date": "2026-10-12",
+  "units": "mm",
+  "coordinate_system": "Local X east, Y north, Z up; orientation is a design assumption, not surveyed north",
+  "width": 12000,
+  "depth": 9000,
+  "gross_area_m2": 108,
+  "external_wall": 450,
+  "partition": 150,
+  "wall_top": 3400,
+  "roof_top_wall": 3800,
+  "ridge_top": 5200,
+  "roof_vertical_thickness": 400,
+  "overhang_x": 450,
+  "overhang_y": 450,
+  "ffl": 0,
+  "external_ground": -150,
+  "ceiling": 3000,
+  "ceiling_thickness": 50,
+  "wall_layers_outside_to_inside": [
+    {
+      "name": "金属面板及基层组合（教学暂分1.2面板+18.8基层，产品待核）",
+      "thickness": 20
+    },
+    {
+      "name": "通风腔",
+      "thickness": 30
+    },
+    {
+      "name": "岩棉保温",
+      "thickness": 180
+    },
+    {
+      "name": "砌块填充",
+      "thickness": 200
+    },
+    {
+      "name": "内饰面/气密基层",
+      "thickness": 20
+    }
+  ],
+  "roof_layers_top_to_bottom": [
+    {
+      "name": "金属板/通风层/基层",
+      "thickness": 60
+    },
+    {
+      "name": "岩棉保温",
+      "thickness": 300
+    },
+    {
+      "name": "气密层/结构基层",
+      "thickness": 40
+    }
+  ],
+  "floor_layers_top_to_bottom": [
+    {
+      "name": "面层及找平",
+      "thickness": 80
+    },
+    {
+      "name": "混凝土板",
+      "thickness": 120
+    },
+    {
+      "name": "抗压保温",
+      "thickness": 200
+    }
+  ],
+  "vestibule": [
+    450,
+    450,
+    3450,
+    3250
+  ],
+  "service": [
+    8800,
+    450,
+    11550,
+    3450
+  ],
+  "wc": [
+    8800,
+    3600,
+    11550,
+    6150
+  ],
+  "mep": [
+    8800,
+    6300,
+    11550,
+    8550
+  ],
+  "louver": {
+    "count": 6,
+    "pitch": 420,
+    "width": 340,
+    "thickness": 40,
+    "bottom": 850,
+    "top": 2450,
+    "shaft_diameter": 20,
+    "pivot_y": -350,
+    "first_pivot_x": 5450,
+    "open_angle_deg": 75,
+    "bearing_outer_diameter": 60,
+    "stop_angles": [
+      0,
+      75
+    ]
+  },
+  "assumed_max_occupants": 18,
+  "seats": 12,
+  "engineering_status": "Teaching design; not engineering approval; all dimensions provisional",
+  "sources": {
+    "teacher": "../01_Teacher/Week01_Original_Lecture.html",
+    "week01": "../02_Week01/W01_Design_Brief.docx",
+    "old_cad": "../03_CAD/",
+    "old_model": "../04_3D/"
+  },
+  "roof_pitch_deg": 13.134022306396323,
+  "openings": [
+    {
+      "id": "D01",
+      "wall": "S",
+      "start": 1500,
+      "end": 2900,
+      "sill": 0,
+      "head": 2300,
+      "type": "door",
+      "net": 1250,
+      "hinge": "start",
+      "swing": "out",
+      "room": "vestibule"
+    },
+    {
+      "id": "W01",
+      "wall": "S",
+      "start": 5200,
+      "end": 7800,
+      "sill": 850,
+      "head": 2450,
+      "type": "window"
+    },
+    {
+      "id": "W02",
+      "wall": "N",
+      "start": 1500,
+      "end": 2900,
+      "sill": 900,
+      "head": 2350,
+      "type": "window"
+    },
+    {
+      "id": "D02",
+      "wall": "N",
+      "start": 5400,
+      "end": 6800,
+      "sill": 0,
+      "head": 2300,
+      "type": "door",
+      "net": 1250,
+      "hinge": "start",
+      "swing": "out",
+      "room": "lounge"
+    },
+    {
+      "id": "W03",
+      "wall": "W",
+      "start": 5000,
+      "end": 6500,
+      "sill": 900,
+      "head": 2400,
+      "type": "window"
+    },
+    {
+      "id": "D03",
+      "wall": "E",
+      "start": 6800,
+      "end": 8200,
+      "sill": 0,
+      "head": 2300,
+      "type": "door",
+      "net": 1250,
+      "hinge": "end",
+      "swing": "out",
+      "room": "mep"
+    },
+    {
+      "id": "D04",
+      "wall": "V",
+      "start": 1600,
+      "end": 3000,
+      "sill": 0,
+      "head": 2300,
+      "type": "door",
+      "net": 1250,
+      "hinge": "end",
+      "swing": "west",
+      "room": "vestibule"
+    },
+    {
+      "id": "D05",
+      "wall": "I",
+      "start": 1600,
+      "end": 2700,
+      "sill": 0,
+      "head": 2300,
+      "type": "door",
+      "net": 950,
+      "hinge": "start",
+      "swing": "east",
+      "room": "service"
+    },
+    {
+      "id": "D06",
+      "wall": "I",
+      "start": 3900,
+      "end": 5000,
+      "sill": 0,
+      "head": 2300,
+      "type": "slider",
+      "net": 1000,
+      "room": "wc"
+    }
+  ],
+  "components_count": 219,
+  "areas_m2": {
+    "vestibule": 8.4,
+    "service": 8.25,
+    "wc": 7.013,
+    "mep": 6.188
+  },
+  "furniture_footprints": [
+    {
+      "name": "BENCH_0_seat",
+      "bbox": [
+        [
+          700.0,
+          4800.0,
+          400.0
+        ],
+        [
+          2500.0,
+          5350.0,
+          450.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_0_back",
+      "bbox": [
+        [
+          700.0,
+          5300.0,
+          450.0
+        ],
+        [
+          2500.0,
+          5350.0,
+          850.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_1_seat",
+      "bbox": [
+        [
+          700.0,
+          6700.0,
+          400.0
+        ],
+        [
+          2500.0,
+          7250.0,
+          450.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_1_back",
+      "bbox": [
+        [
+          700.0,
+          7200.0,
+          450.0
+        ],
+        [
+          2500.0,
+          7250.0,
+          850.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_2_seat",
+      "bbox": [
+        [
+          3000.0,
+          7800.0,
+          400.0
+        ],
+        [
+          4800.0,
+          8350.0,
+          450.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_2_back",
+      "bbox": [
+        [
+          3000.0,
+          8300.0,
+          450.0
+        ],
+        [
+          4800.0,
+          8350.0,
+          850.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_3_seat",
+      "bbox": [
+        [
+          6900.0,
+          7800.0,
+          400.0
+        ],
+        [
+          8500.0,
+          8350.0,
+          450.0
+        ]
+      ]
+    },
+    {
+      "name": "BENCH_3_back",
+      "bbox": [
+        [
+          6900.0,
+          8300.0,
+          450.0
+        ],
+        [
+          8500.0,
+          8350.0,
+          850.0
+        ]
+      ]
+    },
+    {
+      "name": "LOUNGE_table",
+      "bbox": [
+        [
+          3500.0,
+          5500.0,
+          700.0
+        ],
+        [
+          4300.0,
+          6300.0,
+          760.0
+        ]
+      ]
+    },
+    {
+      "name": "WATER_counter_accessible",
+      "bbox": [
+        [
+          10800.0,
+          700.0,
+          720.0
+        ],
+        [
+          11550.0,
+          2000.0,
+          800.0
+        ]
+      ]
+    },
+    {
+      "name": "STORAGE_locker",
+      "bbox": [
+        [
+          10950.0,
+          2550.0,
+          0.0
+        ],
+        [
+          11550.0,
+          3300.0,
+          1900.0
+        ]
+      ]
+    },
+    {
+      "name": "WC_fold_table",
+      "bbox": [
+        [
+          8950.0,
+          3610.0,
+          800.0
+        ],
+        [
+          10350.0,
+          3690.0,
+          1400.0
+        ]
+      ]
+    }
+  ],
+  "review_basis": "R03; no R04 input found",
+  "axes_X": {
+    "1": 225,
+    "2": 3525,
+    "3": 8725,
+    "4": 11775
+  },
+  "axes_Y": {
+    "A": 225,
+    "B": 3325,
+    "C": 3525,
+    "D": 6225,
+    "E": 8775
+  },
+  "platform_base": -400,
+  "ramp_toe_platform_length": 1500,
+  "roof_geometry": "one continuous watertight gabled extrusion",
+  "drainage": "side trough slope 1:200, insulated pipe and indicative heat trace; capacity/frost/power supply pending",
+  "louver_lock": "0/75 degree indexed plate, removable pin shown in parking clip, shaft bearings have true bores; prototype validation pending",
+  "wc_fold_table": {
+    "folded_mm": [
+      1400,
+      80,
+      600
+    ],
+    "deployed_mm": [
+      1400,
+      600
+    ],
+    "load_capacity": "pending product selection"
+  },
+  "heating": "guarded hydronic radiators, heat-source sizing and freeze protection pending",
+  "power_failure": "manual lock/release, battery emergency lights, no door interlock, staff evacuation and water freeze plan pending",
+  "native_planar_faces": 4814,
+  "lock_geometry": {
+    "stationary_plate_z": [
+      820,
+      825
+    ],
+    "rotating_disc_z": [
+      830,
+      840
+    ],
+    "shaft_collar_z": [
+      820,
+      840
+    ],
+    "hole_radius": 3.5,
+    "hole_pitch_radius": 40,
+    "stationary_hole_azimuth_deg": [
+      90,
+      165
+    ],
+    "opening_states_deg": [
+      0,
+      75
+    ],
+    "lower_guard_inner_outer_radius": [
+      55,
+      60
+    ],
+    "lower_guard_z": [
+      825,
+      845
+    ],
+    "pin_park_offset_x": 70,
+    "pin_park_z": [
+      815,
+      860
+    ]
+  }
+}

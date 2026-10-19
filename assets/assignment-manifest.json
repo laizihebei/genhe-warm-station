@@ -1,0 +1,112 @@
+{
+  "title": "冷极暖站 W01—W03 课程作业归档",
+  "generatedFrom": "GENHE_W03 source checkout",
+  "weeks": [
+    {
+      "id": "W01",
+      "version": "REV2",
+      "title": "研究场地与使用问题",
+      "downloads": [
+        {
+          "path": "assets/downloads/第一周作业.zip",
+          "label": "第一周原始作业包（PDF、DOCX、说明文件）",
+          "sha256": "bd37696c7de0e85efff5f9a3b6049a0a94400d1e97df70abcb54bef411152261"
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "version": "R04",
+      "title": "建筑图纸与可编辑模型",
+      "downloads": [
+        {
+          "path": "assets/downloads/第二周第三周.zip",
+          "label": "第二、三周原始交付包",
+          "sha256": "2c39824cabec7657bd6621726c89de17b10a88b2bfb976ddf02b6d0b6730bdd8"
+        },
+        {
+          "path": "assets/drawings.pdf",
+          "label": "建筑图纸 PDF",
+          "sha256": "f09c070851707ffeee638861f344ae5352db1c837e6084c37b3eef7a2b2ca02d"
+        },
+        {
+          "path": "assets/building.skp",
+          "label": "SketchUp 可编辑模型",
+          "sha256": "cf99534ba2717bbebd52ccb2c99177505c57c3340f6496e4be3cf3a41269eb95"
+        },
+        {
+          "path": "assets/building.glb",
+          "label": "同源三维交换模型",
+          "sha256": "30b89b500a6b9660d72f7ffd821491844f30cf0e27772c6aa9c864434acc3aaa"
+        },
+        {
+          "path": "assets/parameters.json",
+          "label": "建筑参数",
+          "sha256": "385e11971956172ae91216481d9b71f19f285a6001d48a9df497c5d8aab159e4"
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "version": "INTERACTIVE",
+      "title": "环境响应网站",
+      "links": [
+        {
+          "path": "index.html",
+          "label": "打开 W03 交互网站"
+        }
+      ],
+      "downloads": [
+        {
+          "path": "assets/downloads/GENHE_W03_Source.zip",
+          "label": "W03 网站源码包",
+          "sha256": "16f341d6300e4d56797e8c09103ba35918ae61a231d90b30b59b33973b4352f7"
+        }
+      ]
+    }
+  ],
+  "w02": {
+    "integrity": {
+      "originalR04ExtractedFileCount": 91,
+      "originalR04ExtractedMissingLockedFileCount": 18,
+      "originalR04ExtractedMissingNativeLogs": [
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A00_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A00_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A01_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A01_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A02_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A02_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A03_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A03_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A04_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A04_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A05_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A05_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A06_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A06_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A07_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A07_save.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A08_reopen.log",
+        "07_QC_Report/Native_AutoCAD/GENHE_W02_R04_A08_save.log"
+      ],
+      "lockManifestExpectedFileCount": 105,
+      "originalArchiveRegularFileCount": 112,
+      "originalArchiveLockedFileCount": 105,
+      "originalArchiveMissingLockedFileCount": 0,
+      "originalArchiveSupplementalFileCount": 7,
+      "originalArchiveMissingNativeLogs": [],
+      "claimsNativeApplicationValidation": false,
+      "note": "原始R04解压目录（复核副本除外）少18份AutoCAD日志，已从原始压缩包恢复到复核副本；原始压缩包包含清单锁定的105项且哈希匹配，另含7项辅助文件。日志只作为随包记录，不代表本轮重新执行了AutoCAD原生验证。"
+    }
+  },
+  "studyAssessment": {
+    "label": "课程自评，不是教师评分标准",
+    "maxPoints": 100,
+    "rubric": {
+      "buffer": 30,
+      "circulationAndAccessibility": 25,
+      "winterDaylight": 20,
+      "maintenance": 25
+    }
+  }
+}
