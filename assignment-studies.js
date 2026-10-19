@@ -1,8 +1,8 @@
 export const scoreRubric = {
-  buffer: { label: '入口缓冲与抗冷风', max: 30 },
-  circulation: { label: '通行、停留与无障碍', max: 25 },
-  daylight: { label: '冬季采光与百叶逻辑', max: 20 },
-  maintenance: { label: '清雪、设备与维护', max: 25 },
+  buffer: { label: '入口缓冲与冷风控制', max: 30 },
+  circulation: { label: '通行组织、停留与无障碍', max: 25 },
+  daylight: { label: '冬季采光与百叶调节', max: 20 },
+  maintenance: { label: '清雪组织、设备与维护', max: 25 },
 };
 
 export const assignmentPlans = [
@@ -10,7 +10,7 @@ export const assignmentPlans = [
     id: 'P01',
     studyOnly: true,
     modifiesR04: false,
-    title: '干湿分区',
+    title: '入口干湿分区',
     subtitle: '把潮湿装备留在入口边界',
     principle: '入口侧容纳换鞋、挂衣与短暂停留；公共暖区维持完整通行带，服务房间沿侧边组织。',
     critique: '降低湿雪进入主要停留区的机会，入口家具需要防潮且便于清理。',
@@ -52,8 +52,8 @@ export const assignmentPlans = [
     id: 'P02',
     studyOnly: true,
     modifiesR04: false,
-    title: '清晰到达',
-    subtitle: '让门斗、等候与服务一眼可读',
+    title: '清晰的到达与导向',
+    subtitle: '明确入口缓冲、等候与服务的空间关系',
     principle: '入口到公共暖区形成短而直接的主路径；饮水服务可见，停留家具退至两侧。',
     critique: '初次使用者容易判断下一步；服务点需避免形成横穿主通道的队列。',
     caution: '核对队列长度、门斗净宽及服务家具是否侵占无障碍路线。',
@@ -94,7 +94,7 @@ export const assignmentPlans = [
     id: 'P03',
     studyOnly: true,
     modifiesR04: false,
-    title: '设备旁路',
+    title: '设备维护流线分离',
     subtitle: '维护人员不穿越公共停留区',
     principle: '设备维护靠侧边独立组织，访客使用暖区与服务空间时保留较少交叉的回路。',
     critique: '维护和访客路径更容易分辨，设备侧边需保证搬运、检修和开门净空。',
@@ -136,7 +136,7 @@ export const assignmentPlans = [
     id: 'P04',
     studyOnly: true,
     modifiesR04: false,
-    title: '采光共享',
+    title: '采光与公共停留',
     subtitle: '把公共停留和冬季日照一起布置',
     principle: '主要休息位靠近采光边缘，中央保留回转与交通空间，服务房间仍集中在侧边。',
     critique: '能把日照体验纳入家具选择；需防止窗边冷辐射、眩光和百叶操作冲突。',
@@ -184,7 +184,7 @@ function planSvg(plan) {
   const zones = plan.zones.map((zone) => `<g><rect class="plan-zone ${zone.kind}" x="${zone.x}" y="${zone.y}" width="${zone.w}" height="${zone.h}" rx="2"/><text class="plan-zone-label" x="${zone.x + zone.w / 2}" y="${zone.y + 19}" text-anchor="middle">${escapeHtml(zone.label)}</text></g>`).join('');
   const furniture = plan.furniture.map((item) => `<g><rect class="plan-furniture" x="${item.x}" y="${item.y}" width="${item.w}" height="${item.h}" rx="2"/><text class="plan-furniture-label" x="${item.x + item.w / 2}" y="${item.y + item.h / 2 + 3}" text-anchor="middle">${escapeHtml(item.label)}</text></g>`).join('');
   const partitions = (plan.partitionPaths || []).map((path) => `<path class="plan-divider" d="${path}"/>`).join('');
-  return `<svg class="study-plan" viewBox="0 0 600 430" role="img" aria-label="${escapeHtml(plan.id)} ${escapeHtml(plan.title)}平面关系示意"><defs><marker id="route-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#bf8752"/></marker></defs>${zones}${furniture}<path class="plan-wall" d="M50 45H550V174 M550 208V375H145 M50 375V45"/><path class="plan-entry" d="M50 375H112 M550 174V208"/><path class="plan-window" d="M250 376h84 M434 45h60 M50 180v58"/>${partitions}<path class="plan-route" d="${plan.routePath || 'M78 394H157V346H250'}"/><text class="plan-note" x="52" y="25">固定教学外包轮廓 · 12 × 9 m</text><text class="plan-note" x="51" y="415">入口侧 → 暖区 → 服务 / 维护</text></svg>`;
+  return `<svg class="study-plan" viewBox="0 0 600 430" role="img" aria-label="${escapeHtml(plan.id)} ${escapeHtml(plan.title)}平面关系示意"><defs><marker id="route-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#bf8752"/></marker></defs>${zones}${furniture}<path class="plan-wall" d="M50 45H550V174 M550 208V375H145 M50 375V45"/><path class="plan-entry" d="M50 375H112 M550 174V208"/><path class="plan-window" d="M250 376h84 M434 45h60 M50 180v58"/>${partitions}<path class="plan-route" d="${plan.routePath || 'M78 394H157V346H250'}"/><text class="plan-note" x="52" y="25">固定教学外包轮廓 · 12 × 9 m</text><text class="plan-note" x="51" y="415">入口侧 → 暖区 → 服务与维护</text></svg>`;
 }
 
 const scenarioLabels = { cold: '极寒低温', snow: '降雪结冰', sun: '冬季日照' };
@@ -202,7 +202,7 @@ function renderStudy() {
   const scoreTotal = Object.values(selectedPlan.scores).reduce((sum, score) => sum + score, 0);
   const response = selectedPlan.responses[selectedScenario];
   const currentText = selectedStage === 'before' ? response.before : response.after;
-  root.innerHTML = `<div class="study-tabs" role="group" aria-label="选择平面比较方案">${assignmentPlans.map((plan) => `<button aria-pressed="${plan.id === selectedPlan.id}" data-plan="${plan.id}"><small>${plan.id}</small><strong>${escapeHtml(plan.title)}</strong></button>`).join('')}</div><div class="study-workbench" data-show-state="${selectedStage}"><div class="plan-board"><div class="plan-board-head"><span>SCHEMATIC PLAN / 研究示意</span><b>${selectedPlan.id} · ${escapeHtml(selectedPlan.title)}</b></div>${planSvg(selectedPlan)}<div class="plan-legend"><span><i class="legend-buffer"></i>入口缓冲</span><span><i class="legend-warm"></i>公共暖区</span><span><i class="legend-service"></i>服务空间</span><span><i class="legend-equipment"></i>设备维护</span></div><p class="study-only">study-only · 方案比较图，不是R04竣工图；仅供课程空间研究，不改变原始CAD / SKP / GLB。</p></div><div class="study-analysis"><div class="study-title"><span>${selectedPlan.id} / SPATIAL STRATEGY</span><h3>${escapeHtml(selectedPlan.subtitle)}</h3><p>${escapeHtml(selectedPlan.principle)}</p></div><div class="response-simulator"><div class="response-tools"><div class="scenario-pills" role="group" aria-label="环境变量">${Object.entries(scenarioLabels).map(([key, label]) => `<button data-environment="${key}" aria-pressed="${key === selectedScenario}">${label}</button>`).join('')}</div><div class="stage-switch" role="group" aria-label="环境响应前后"><button data-stage="before" aria-pressed="${selectedStage === 'before'}">环境未响应</button><button data-stage="after" aria-pressed="${selectedStage === 'after'}">建筑响应后</button></div></div><div class="response-compare"><span>${scenarioLabels[selectedScenario]} · ${selectedStage === 'before' ? '问题状态' : '设计响应'}</span><p>${escapeHtml(currentText)}</p><small>设计动作：${escapeHtml(response.action)}</small></div></div><div class="critique-block"><span>CRIT / 设计自评</span><p>${escapeHtml(selectedPlan.critique)}</p><small>风险待检：${escapeHtml(selectedPlan.caution)}</small></div><div class="score-block"><div class="score-heading"><span>课程自评 · 非老师评分</span><strong>${scoreTotal}<small> / 100</small></strong></div>${rubric}<p>权重：入口缓冲30、通行与无障碍25、冬季采光20、维护25。用于比较研究，不代表工程性能或规范结论。</p></div></div></div>`;
+  root.innerHTML = `<div class="study-tabs" role="group" aria-label="选择平面比较方案">${assignmentPlans.map((plan) => `<button aria-pressed="${plan.id === selectedPlan.id}" data-plan="${plan.id}"><small>${plan.id}</small><strong>${escapeHtml(plan.title)}</strong></button>`).join('')}</div><div class="study-workbench" data-show-state="${selectedStage}"><div class="plan-board"><div class="plan-board-head"><span>SCHEMATIC PLAN / 平面研究示意</span><b>${selectedPlan.id} · ${escapeHtml(selectedPlan.title)}</b></div>${planSvg(selectedPlan)}<div class="plan-legend"><span><i class="legend-buffer"></i>入口缓冲</span><span><i class="legend-warm"></i>公共暖区</span><span><i class="legend-service"></i>服务空间</span><span><i class="legend-equipment"></i>设备维护</span></div><p class="study-only">补充研究示意 · 非 R04 施工图；用于课程空间比较，不改变原始 CAD / SKP / GLB。</p></div><div class="study-analysis"><div class="study-title"><span>${selectedPlan.id} / SPATIAL STRATEGY</span><h3>${escapeHtml(selectedPlan.subtitle)}</h3><p>${escapeHtml(selectedPlan.principle)}</p></div><div class="response-simulator"><div class="response-tools"><div class="scenario-pills" role="group" aria-label="环境变量">${Object.entries(scenarioLabels).map(([key, label]) => `<button data-environment="${key}" aria-pressed="${key === selectedScenario}">${label}</button>`).join('')}</div><div class="stage-switch" role="group" aria-label="环境响应前后"><button data-stage="before" aria-pressed="${selectedStage === 'before'}">环境基准状态</button><button data-stage="after" aria-pressed="${selectedStage === 'after'}">设计响应状态</button></div></div><div class="response-compare"><span>${scenarioLabels[selectedScenario]} · ${selectedStage === 'before' ? '问题状态' : '设计响应'}</span><p>${escapeHtml(currentText)}</p><small>设计策略：${escapeHtml(response.action)}</small></div></div><div class="critique-block"><span>DESIGN REVIEW / 方案自评</span><p>${escapeHtml(selectedPlan.critique)}</p><small>待核查事项：${escapeHtml(selectedPlan.caution)}</small></div><div class="score-block"><div class="score-heading"><span>课程自评 · 非教师评分</span><strong>${scoreTotal}<small> / 100</small></strong></div>${rubric}<p>评价权重：入口缓冲 30、通行与无障碍 25、冬季采光 20、维护 25。该自评仅用于方案比较，不代表教师评分、工程性能或规范结论。</p></div></div></div>`;
   root.querySelectorAll('[data-plan]').forEach((button) => button.addEventListener('click', () => {
     selectedPlan = assignmentPlans.find((plan) => plan.id === button.dataset.plan) || assignmentPlans[0];
     renderStudy();
@@ -218,3 +218,4 @@ function renderStudy() {
 }
 
 if (typeof document !== 'undefined') renderStudy();
+
