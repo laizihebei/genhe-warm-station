@@ -4,3 +4,11 @@
 
 /* Keep explanatory text legible in a review setting. */
 .topbar nav button{font-size:12px}.lead{font-size:13px}.research-grid p{font-size:11px}.site-meta small{font-size:10px}.scenario-desc{font-size:12px}.response-card>p{font-size:11px}.metrics small{font-size:9px}.strategy-list small{font-size:11px}.walk-instructions p{font-size:11px}.louver-control p{font-size:10px}.method{font-size:10px}@media(max-width:760px){.topbar nav button{font-size:9px}}
+
+.material-switch{display:flex;align-items:center;gap:2px;padding:3px;background:#f9fbf3d9;border:1px solid #ffffffb0;backdrop-filter:blur(12px)}
+.material-switch button{padding:8px 10px;color:#40595a;font-size:9px;white-space:nowrap;border:1px solid transparent;transition:background .18s,color .18s}
+.material-switch button.active{background:#173d40;color:#f4f6ef}
+.viewer.walking .material-switch{display:none}
+@media(max-width:760px){.material-switch button{font-size:8px;padding:7px 7px}.location-pill span{display:none}.viewer-top{gap:5px}}
+
+.site-data-shortcut{font-size:10px;color:#204b55;background:#ffffffdc;border:1px solid #fff;padding:11px 12px;text-decoration:none}.site-data-card{margin:26px 0;padding:20px 17px;border:1px solid #78989c66;background:#ffffff0b}.site-data-card h2{font-size:17px!important;line-height:1.6!important;margin:12px 0!important}.site-data-card p{font-size:11px;line-height:1.9}.site-data-card dl{margin:15px 0}.site-data-card dl div{padding:9px 0;border-bottom:1px solid #78989c44}.site-data-card dt{font-size:9px;opacity:.7}.site-data-card dd{margin:4px 0;font-size:11px}.site-data-card small{display:block;font-size:9px;opacity:.7;margin-top:3px}.site-data-card a,.site-data-card button{display:block;font-size:11px;margin-top:14px;color:inherit}.site-data-card button{padding:10px 12px;background:#b98752;color:white;border:0;cursor:pointer}.site-data-limit{opacity:.75}#historical-input-status:empty{display:none}@media(max-width:600px){.site-data-shortcut{font-size:9px;padding:9px 7px}}

@@ -60,7 +60,7 @@
         {
           "path": "assets/downloads/GENHE_W03_Source.zip",
           "label": "W03 网站源码包",
-          "sha256": "fb6eaf2f93774f5575e04969b9805ac61a2c419df00c9183e2206b318450ceab"
+          "sha256Note": "校验值见 assets/downloads/GENHE_W03_Source.zip.sha256.txt；源码 ZIP 不循环包含自身或自身校验值。"
         }
       ]
     }
@@ -108,5 +108,14 @@
       "winterDaylight": 20,
       "maintenance": 25
     }
+  },
+  "supplementalResearch": {
+    "page": "research-review.html",
+    "data": [
+      "assets/research-data/site-basis.json",
+      "assets/research-data/era5_daily.json",
+      "assets/research-data/era5_land_snow.json"
+    ],
+    "classification": "Map POI and regional reanalysis; R04 placement and surveyed site levels unconfirmed"
   }
 }

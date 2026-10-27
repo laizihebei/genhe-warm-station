@@ -1,0 +1,12 @@
+{
+  "id": "GENHE-W03-20261027-R04-SITE",
+  "project": "冷极暖站 GENHE WARM STATION",
+  "author": "赵一恒",
+  "email": "laizihebei@gmail.com",
+  "publicUrl": "https://laizihebei.github.io/genhe-warm-station/",
+  "baseline": "5901a2e4a35604dc8aad00b9cb3cb44a8ac0dccf",
+  "W01": "REV2",
+  "W02": "R04",
+  "modelSha256": "30b89b500a6b9660d72f7ffd821491844f30cf0e27772c6aa9c864434acc3aaa",
+  "geometryModified": false
+}

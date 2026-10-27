@@ -1,0 +1,271 @@
+{
+  "project": "冷极暖站 / GENHE WARM STATION",
+  "stage": "W03 site evidence review",
+  "generatedAt": "2026-10-27",
+  "anchor": {
+    "name": "工会驿站（根河市冷极驿站）",
+    "address": "内蒙古自治区呼伦贝尔市根河市森工路64号",
+    "amap": {
+      "longitude": 121.53630316257475,
+      "latitude": 50.78665329396351,
+      "crs": "GCJ-02",
+      "poi": "B0JKZ7PZLB",
+      "link": "https://surl.amap.com/1fzUFhqe1z3Gm"
+    },
+    "wgs84Approx": {
+      "longitude": 121.52944255160155,
+      "latitude": 50.78536615578917,
+      "method": "iterative inverse GCJ-02 transform; approximate, not surveyed"
+    },
+    "evidence": [
+      {
+        "type": "official report",
+        "title": "根河冷极驿站：极寒中的暖民堡垒与书香阵地",
+        "url": "https://www.genhe.gov.cn/News/show/1390105.html",
+        "supports": "the existing station is at 森工路64号"
+      },
+      {
+        "type": "map POI",
+        "title": "工会驿站（根河市冷极驿站）",
+        "url": "https://surl.amap.com/1fzUFhqe1z3Gm",
+        "supports": "place identity and map coordinate"
+      },
+      {
+        "type": "user-provided map screenshot",
+        "supports": "the same POI name, 森工路64号 address, and photographs of the existing station"
+      }
+    ]
+  },
+  "architecture": {
+    "baseline": "W02 R04",
+    "dimensionsM": [
+      12,
+      9
+    ],
+    "grossAreaM2": 108,
+    "placementStatus": "not confirmed",
+    "designNorthStatus": "not surveyed"
+  },
+  "known": [
+    "The research anchor is an existing station, not a confirmed vacant parcel for a replacement building.",
+    "The W02 R04 building is a teaching concept and has not been demonstrated to occupy this address.",
+    "The Amap POI coordinate identifies a place point, not the property boundary or building footprint."
+  ],
+  "missing": [
+    "parcel or owner-approved buildable boundary and clearance",
+    "current surveyed building footprint and edge-to-road dimensions",
+    "entry threshold, curb, ramp and platform elevation survey",
+    "verified orientation of the R04 design frame against true north",
+    "imagery capture date and verified neighboring building heights"
+  ],
+  "terrain": {
+    "regionalDem": {
+      "source": "Copernicus GLO-90 via Open-Meteo elevation API",
+      "resolutionM": 90,
+      "gridCenterElevationM": 716,
+      "use": "regional context only; not usable for entry ramp, drainage or foundation setting out",
+      "url": "https://open-meteo.com/en/docs/elevation-api"
+    }
+  },
+  "weather": {
+    "period": "2016-10-01 through 2026-03-31; ten October–March winters 2016/17–2025/26",
+    "classification": "gridded reanalysis; not an observation at the station",
+    "coordinateInput": {
+      "longitude": 121.52944255160155,
+      "latitude": 50.78536615578917,
+      "crs": "WGS-84 approximate inverse of the Amap GCJ-02 POI"
+    },
+    "datasets": [
+      {
+        "name": "ERA5 daily",
+        "model": "ERA5",
+        "resolution": "0.25° (~25 km)",
+        "gridPoint": {
+          "longitude": 121.5,
+          "latitude": 50.75
+        },
+        "elevationM": 717,
+        "file": "era5_daily.json",
+        "variables": [
+          "daily minimum and mean air temperature",
+          "snowfall",
+          "precipitation",
+          "maximum wind speed and gust",
+          "dominant wind direction",
+          "shortwave radiation",
+          "sunshine duration"
+        ]
+      },
+      {
+        "name": "ERA5-Land daily",
+        "model": "ERA5-Land",
+        "resolution": "0.1° (~11 km)",
+        "gridPoint": {
+          "longitude": 121.5,
+          "latitude": 50.800003
+        },
+        "elevationM": 717,
+        "file": "era5_land_snow.json",
+        "variables": [
+          "daily minimum and mean air temperature",
+          "mean snow depth"
+        ]
+      }
+    ],
+    "source": "Open-Meteo Historical Weather API; reanalysis source and spatial resolutions are described by the provider.",
+    "sourceUrl": "https://open-meteo.com/en/docs/historical-weather-api",
+    "queryRetrieved": "2026-10-27",
+    "winters": [
+      {
+        "id": "2016-2017",
+        "days": 182,
+        "meanDailyMeanTempC": -15.895054945054925,
+        "coldestDailyMinimumC": -38.3,
+        "coldestDay": "2017-01-23",
+        "daysAtOrBelowMinus30C": 40,
+        "snowfallTotalCm": 25.130000000000013,
+        "maximumDailyGustKmh": 59,
+        "maximumDailyGustDate": "2016-10-03",
+        "maximumMeanSnowDepthM": 0.2,
+        "meanDailyShortwaveMJm2": 8.307527472527472,
+        "meanDailySunshineHours": 8.204880647130647,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2017-2018",
+        "days": 182,
+        "meanDailyMeanTempC": -16.60934065934066,
+        "coldestDailyMinimumC": -42.4,
+        "coldestDay": "2018-01-25",
+        "daysAtOrBelowMinus30C": 58,
+        "snowfallTotalCm": 22.26000000000001,
+        "maximumDailyGustKmh": 59.8,
+        "maximumDailyGustDate": "2018-03-26",
+        "maximumMeanSnowDepthM": 0.13,
+        "meanDailyShortwaveMJm2": 8.182142857142857,
+        "meanDailySunshineHours": 8.067377762515262,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2018-2019",
+        "days": 182,
+        "meanDailyMeanTempC": -13.11043956043956,
+        "coldestDailyMinimumC": -36.3,
+        "coldestDay": "2019-02-06",
+        "daysAtOrBelowMinus30C": 17,
+        "snowfallTotalCm": 18.480000000000008,
+        "maximumDailyGustKmh": 62.6,
+        "maximumDailyGustDate": "2018-12-03",
+        "maximumMeanSnowDepthM": 0.11,
+        "meanDailyShortwaveMJm2": 8.33785714285714,
+        "meanDailySunshineHours": 8.340136294261292,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2019-2020",
+        "days": 183,
+        "meanDailyMeanTempC": -13.620218579234976,
+        "coldestDailyMinimumC": -34.5,
+        "coldestDay": "2019-12-26",
+        "daysAtOrBelowMinus30C": 14,
+        "snowfallTotalCm": 25.970000000000013,
+        "maximumDailyGustKmh": 75.2,
+        "maximumDailyGustDate": "2019-10-21",
+        "maximumMeanSnowDepthM": 0.16,
+        "meanDailyShortwaveMJm2": 8.02502732240437,
+        "meanDailySunshineHours": 7.892608864602305,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2020-2021",
+        "days": 182,
+        "meanDailyMeanTempC": -15.653296703296697,
+        "coldestDailyMinimumC": -41.3,
+        "coldestDay": "2021-01-28",
+        "daysAtOrBelowMinus30C": 58,
+        "snowfallTotalCm": 41.510000000000005,
+        "maximumDailyGustKmh": 81.7,
+        "maximumDailyGustDate": "2021-03-15",
+        "maximumMeanSnowDepthM": 0.26,
+        "meanDailyShortwaveMJm2": 7.828461538461536,
+        "meanDailySunshineHours": 7.702095238095238,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2021-2022",
+        "days": 182,
+        "meanDailyMeanTempC": -14.560989010989013,
+        "coldestDailyMinimumC": -41.6,
+        "coldestDay": "2021-12-23",
+        "daysAtOrBelowMinus30C": 48,
+        "snowfallTotalCm": 27.93000000000001,
+        "maximumDailyGustKmh": 73.8,
+        "maximumDailyGustDate": "2022-03-10",
+        "maximumMeanSnowDepthM": 0.13,
+        "meanDailyShortwaveMJm2": 8.090274725274725,
+        "meanDailySunshineHours": 7.947165460927964,
+        "mostFrequentDailyWindDirectionDegrees": 315
+      },
+      {
+        "id": "2022-2023",
+        "days": 182,
+        "meanDailyMeanTempC": -15.675274725274726,
+        "coldestDailyMinimumC": -47.5,
+        "coldestDay": "2023-01-22",
+        "daysAtOrBelowMinus30C": 52,
+        "snowfallTotalCm": 50.40000000000001,
+        "maximumDailyGustKmh": 69.5,
+        "maximumDailyGustDate": "2023-03-10",
+        "maximumMeanSnowDepthM": 0.4,
+        "meanDailyShortwaveMJm2": 8.291153846153847,
+        "meanDailySunshineHours": 7.919142796092799,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2023-2024",
+        "days": 183,
+        "meanDailyMeanTempC": -15.834426229508196,
+        "coldestDailyMinimumC": -43.6,
+        "coldestDay": "2023-12-19",
+        "daysAtOrBelowMinus30C": 57,
+        "snowfallTotalCm": 37.03000000000001,
+        "maximumDailyGustKmh": 59.8,
+        "maximumDailyGustDate": "2024-03-23",
+        "maximumMeanSnowDepthM": 0.23,
+        "meanDailyShortwaveMJm2": 8.265792349726775,
+        "meanDailySunshineHours": 7.900845370370369,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2024-2025",
+        "days": 182,
+        "meanDailyMeanTempC": -14.543956043956033,
+        "coldestDailyMinimumC": -40.2,
+        "coldestDay": "2025-02-05",
+        "daysAtOrBelowMinus30C": 29,
+        "snowfallTotalCm": 54.110000000000035,
+        "maximumDailyGustKmh": 70.6,
+        "maximumDailyGustDate": "2024-10-18",
+        "maximumMeanSnowDepthM": 0.38,
+        "meanDailyShortwaveMJm2": 8.027032967032966,
+        "meanDailySunshineHours": 7.642247756410254,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      },
+      {
+        "id": "2025-2026",
+        "days": 182,
+        "meanDailyMeanTempC": -15.65,
+        "coldestDailyMinimumC": -39.5,
+        "coldestDay": "2025-12-26",
+        "daysAtOrBelowMinus30C": 58,
+        "snowfallTotalCm": 51.10000000000002,
+        "maximumDailyGustKmh": 62.3,
+        "maximumDailyGustDate": "2025-10-07",
+        "maximumMeanSnowDepthM": 0.39,
+        "meanDailyShortwaveMJm2": 7.916208791208793,
+        "meanDailySunshineHours": 7.544904426129427,
+        "mostFrequentDailyWindDirectionDegrees": 270
+      }
+    ]
+  }
+}

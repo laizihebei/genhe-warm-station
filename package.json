@@ -1,0 +1,9 @@
+{
+  "name": "genhe-warm-station-review",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/serve.test.mjs tests/site-evidence.test.mjs tests/winter-summary.test.mjs",
+    "preview": "node serve.mjs"
+  }
+}
