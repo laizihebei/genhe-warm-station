@@ -1,5 +1,5 @@
 {
-  "id": "GENHE-W03-20261027-R04-SITE",
+  "id": "GENHE-W03-20261104-PUBLISHED",
   "project": "冷极暖站 GENHE WARM STATION",
   "author": "赵一恒",
   "email": "laizihebei@gmail.com",
@@ -8,5 +8,10 @@
   "W01": "REV2",
   "W02": "R04",
   "modelSha256": "30b89b500a6b9660d72f7ffd821491844f30cf0e27772c6aa9c864434acc3aaa",
-  "geometryModified": false
+  "geometryModified": false,
+  "implementationBase": "6ed1434d063eb4057034ba870132e3ebca5e662b",
+  "publicationStatus": "release",
+  "change": "Low furniture collision sampling and portable local delivery; R04 geometry unchanged",
+  "presentationSeconds": 223.067,
+  "releaseTag": "course-final-20261104"
 }

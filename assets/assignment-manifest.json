@@ -117,5 +117,24 @@
       "assets/research-data/era5_land_snow.json"
     ],
     "classification": "Map POI and regional reanalysis; R04 placement and surveyed site levels unconfirmed"
+  },
+  "finalCoursework": {
+    "presentation": {
+      "path": "assets/course-presentation.mp4",
+      "sha256": "d984420ca955bb33d0710103ac0c02ca974ceb1e78c6f160ba92fe937ffef3d0",
+      "durationSeconds": 223.067,
+      "format": "1920x1080 H.264/AAC 30fps"
+    },
+    "projectArchive": {
+      "path": "assets/downloads/GENHE_Project_Archive.zip",
+      "sha256": "570f365713ab1550a381dcce804118d035a0d51ec44dd2d9f25bc27f534429ee",
+      "scope": "交接、工作流卡片及Skill；建筑原包与网站源码分别下载"
+    },
+    "submissionBundle": {
+      "url": "https://github.com/laizihebei/genhe-warm-station/releases/download/course-final-20261104/%E8%B5%B5%E4%B8%80%E6%81%92202415014186.zip",
+      "tag": "course-final-20261104",
+      "filename": "赵一恒202415014186.zip",
+      "sha256Note": "校验值见同一GitHub Release的SHA-256附件；不循环嵌入总包自身哈希。"
+    }
   }
 }

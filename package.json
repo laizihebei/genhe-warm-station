@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/serve.test.mjs tests/site-evidence.test.mjs tests/winter-summary.test.mjs",
+    "test": "node --test tests/serve.test.mjs tests/site-evidence.test.mjs tests/winter-summary.test.mjs tests/serve-media.test.mjs",
     "preview": "node serve.mjs"
   }
 }

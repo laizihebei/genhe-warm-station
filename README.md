@@ -1,18 +1,19 @@
 # 冷极暖站 · GENHE WARM STATION
 
-赵一恒 · laizihebei@gmail.com
+赵一恒 · 202415014186 · laizihebei@gmail.com
 
-《建筑新技术》课程 W01—W03 作品：根河户外劳动者服务空间研究、R04 建筑方案与环境响应交互。
+基于云端提交6ed1434的课程发布版。
+W01 REV2 / W02 R04；219个网格、六片活动百叶；原始建筑几何与参数不变。
 
-- 在线网站：https://laizihebei.github.io/genhe-warm-station/
-- 课程成果归档：assignments.html
-- 场地与历史气候依据：research-review.html
-- 本地使用：双击“打开网站.cmd”；需安装 Node.js。也可在本目录运行 npm run preview。
-- 网站检查：npm test。
+入口：index.html；全部作业：assignments.html；场地与气候：research-review.html。
+漫游：W前进、S后退、A左移、D右移；拖动转向，E操作附近门扇，Esc退出。
 
-W01 使用 REV2，建筑与原始下载使用 W02 R04。三维模型为 219 个网格、六片百叶。网站展示不改原始建筑几何。
+本轮修复低桌和长凳的碰撞检测，补充便携启动。完整课程文件夹附带 runtime/node.exe；源码 ZIP 仅保留源文件、静态资源与测试，需另有 Node.js。启动：node serve.mjs；测试：node --test tests/*.test.mjs。
 
-场地及气象资料的来源、坐标系统和适用范围见场地档案。交互变量是教学情景输入，不代表现场监测或工程验算。
+场地为真实研究锚点；R04为教学概念建筑。历史气候为区域再分析，交互为规则化教学情景，不代表现场监测或工程验算。
+源码包不包含自身ZIP和SHA侧车，不循环归档；Windows运行环境及其许可证只放在完整课程文件夹。
 
-源码 ZIP 保留网站文件与资源；为避免循环包含，排除自身 ZIP 和其 SHA-256 侧车文件。
-发布标识：GENHE-W03-20261027-R04-SITE
+课程汇报视频（约3分43秒、1080p）和项目交接/工作流存档已加入 assignments.html；分镜与讲稿随课程文件夹提供。自动测试共7项。
+
+- 完整提交包：[GitHub Releases](https://github.com/laizihebei/genhe-warm-station/releases/download/course-final-20261104/%E8%B5%B5%E4%B8%80%E6%81%92202415014186.zip)
+- 可复用Skill：[skills/architecture-course-handoff/SKILL.md](skills/architecture-course-handoff/SKILL.md)

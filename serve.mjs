@@ -10,7 +10,8 @@ const contentTypes = new Map([
   ['.json', 'application/json; charset=utf-8'], ['.pdf', 'application/pdf'],
   ['.png', 'image/png'], ['.jpg', 'image/jpeg'], ['.jpeg', 'image/jpeg'],
   ['.svg', 'image/svg+xml'], ['.webp', 'image/webp'], ['.glb', 'model/gltf-binary'],
-  ['.zip', 'application/zip'], ['.skp', 'application/octet-stream'], ['.dae', 'model/vnd.collada+xml']
+  ['.zip', 'application/zip'], ['.skp', 'application/octet-stream'], ['.dae', 'model/vnd.collada+xml'],
+  ['.mp4', 'video/mp4'], ['.srt', 'application/x-subrip; charset=utf-8']
 ]);
 
 function resolveSiteFile(root, requestUrl) {
@@ -45,14 +46,37 @@ export function createPreviewServer({ root = process.cwd() } = {}) {
         info = await stat(file);
       }
       if (!info.isFile()) throw new Error('Not a file');
-      response.writeHead(200, {
+      let start = 0, end = info.size - 1, status = 200;
+      const rangeHeaders = {};
+      if (request.headers.range) {
+        const match = /^bytes=(\d*)-(\d*)$/.exec(request.headers.range);
+        let valid = Boolean(match && (match[1] || match[2]) && info.size > 0);
+        if (valid && match[1]) {
+          start = Number(match[1]);
+          end = match[2] ? Math.min(Number(match[2]), info.size - 1) : info.size - 1;
+          valid = Number.isSafeInteger(start) && Number.isSafeInteger(end) && start < info.size && start <= end;
+        } else if (valid) {
+          const suffix = Number(match[2]);
+          valid = Number.isSafeInteger(suffix) && suffix > 0;
+          start = Math.max(0, info.size - suffix);
+        }
+        if (!valid) {
+          response.writeHead(416, { 'Content-Range': `bytes */${info.size}`, 'Accept-Ranges': 'bytes' }).end();
+          return;
+        }
+        status = 206;
+        rangeHeaders['Content-Range'] = `bytes ${start}-${end}/${info.size}`;
+      }
+      response.writeHead(status, {
         'Content-Type': contentTypes.get(extname(file).toLowerCase()) || 'application/octet-stream',
-        'Content-Length': info.size,
+        'Content-Length': info.size ? end - start + 1 : 0,
+        'Accept-Ranges': 'bytes',
         'X-Content-Type-Options': 'nosniff',
-        'Cache-Control': 'no-store'
+        'Cache-Control': 'no-store',
+        ...rangeHeaders
       });
-      if (request.method === 'HEAD') response.end();
-      else createReadStream(file).pipe(response);
+      if (request.method === 'HEAD' || info.size === 0) response.end();
+      else createReadStream(file, { start, end }).pipe(response);
     } catch {
       if (!response.headersSent) response.writeHead(404).end('Not found');
       else response.destroy();
